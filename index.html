@@ -19,6 +19,8 @@
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -27,14 +29,18 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div data-barba="wrapper">
-      <div class="navbar">
+      <div class="navbar" 
+      data-aos="fade-down"
+      data-aos-duration="3000"
+      >
         <div class="nav-links">
           <div id="item-list-1">
             <a class="nav-link-holder" href="#home">
-              <i class="bx bx-grid-alt"></i>
+              <i class="bx bx-home"></i>
               <span class="nav-link-text">Home</span>
             </a>
             <a class="nav-link-holder" href="#projects">
@@ -55,9 +61,13 @@
       <main data-barba="container" data-barba-namespace="home">
         <section id="home" data-nav="home" class="home-background">
           <div class="split-flex">
-            <div class="short-info split-flex-col">
+            <div
+              class="short-info split-flex-col"
+              data-aos="fade-right"
+              data-aos-duration="3000"
+            >
               <div class="hello-heading" style="justify-content: flex-start">
-                <h1>Hello !</h1>
+                <h1>Hello 👋 !</h1>
                 <h1>
                   I am
                   <span class="gradient">Ayush Khaire !</span>
@@ -72,18 +82,34 @@
                   <span class="typed-text gradient"></span>
                 </div>
               </div>
-              <a href="https://github.com/AYUSHKHAIRE" target="_blank" class="glow-on-hover"  >
-                <i class="bx bxl-github "></i>
+              <a
+                href="https://github.com/AYUSHKHAIRE"
+                target="_blank"
+                class="glow-on-hover"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >
+                <i class="bx bxl-github"></i>
                 View My GitHub
                 <span class="material-icons">open_in_new</span>
               </a>
-              <a href="https://linkedin.com/in/ayushkhaire" target="_blank" class="glow-on-hover"  >
-                <i class="bx bxl-linkedin "></i>
+              <a
+                href="https://linkedin.com/in/ayushkhaire"
+                target="_blank"
+                class="glow-on-hover"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >
+                <i class="bx bxl-linkedin"></i>
                 View My Linkedin
                 <span class="material-icons">open_in_new</span>
               </a>
             </div>
-            <div class="profile-photo">
+            <div
+              class="profile-photo"
+              data-aos="fade-left"
+              data-aos-duration="3000"
+            >
               <img
                 class="profile-image"
                 src="https://avatars.githubusercontent.com/u/141166916?v=4"
@@ -105,6 +131,7 @@
     </div>
 
     <script>
+      AOS.init();
       barba.init({
         transitions: [
           {
@@ -177,6 +204,8 @@
         backDelay: 1000,
         loop: true,
       });
+
+      ScrollReveal().reveal("section");
     </script>
   </body>
 </html>
