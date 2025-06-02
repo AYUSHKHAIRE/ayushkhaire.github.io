@@ -86,7 +86,7 @@ body{
     background-color: #11101D;
     color: #fff;
   }
-  /* home */
+  /* General */
   .split-flex{
     display: flex;
     align-items: center;
@@ -113,16 +113,9 @@ body{
     margin-right: 20px;
   }
 .gradient {
-  background: linear-gradient(68deg,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);;
+  background: linear-gradient(68deg,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.home-background {
-  background-image: url('./assets/animation.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 400px; /* or 100vh for full screen */
 }
 
 .glow-on-hover {
@@ -188,7 +181,81 @@ body{
   100% { background-position: 0 0; }
 }
 
+/* home */
+.home-background {
+  background-image: url('./assets/animation.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px; /* or 100vh for full screen */
+}
 
+.section-heading{
+  background: linear-gradient(68deg,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 70vw;
+}
+
+/* Projects */
+#projects {
+  align-items: center;
+  justify-content: center;
+}
+
+.head-wrapper {
+  max-width: 40vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.projectmain{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  max-width: 40vw;
+  width: 100%;
+}
+
+.meta-abt-prj{
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.project-head-and-desc{
+  width: 100%;
+}
+
+.project-tech-used{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.project-tech-used-item{
+  height: 30px;
+  padding: 5px 10px;
+  color: #000000;
+  background: linear-gradient(rgb(137, 157, 255) , rgb(255, 115, 143) );
+  border-radius: 1px;
+  border: 1px solid transparent;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+/* media queries */
   @media only screen and (max-width: 702px) {
     .nav-link-text{
       display: none;
