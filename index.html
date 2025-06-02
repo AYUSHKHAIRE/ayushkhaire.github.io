@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Khaire | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      [data-barba="container"] {
+        position: relative;
+        width: 100%;
+        font-family: monospace;
+      }
+    </style>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div data-barba="wrapper">
+      <div class="navbar">
+        <div class="nav-links">
+          <div id="item-list-1">
+            <a class="nav-link-holder" href="#home">
+              <i class="bx bx-grid-alt"></i>
+              <span class="nav-link-text">Home</span>
+            </a>
+            <a class="nav-link-holder" href="#projects">
+              <i class="bx bx-grid-alt"></i>
+              <span class="nav-link-text">Projects</span>
+            </a>
+            <a class="nav-link-holder" href="#about">
+              <i class="bx bx-user"></i>
+              <span class="nav-link-text">About</span>
+            </a>
+            <a class="nav-link-holder" href="#work">
+              <i class="bx bx-chat"></i>
+              <span class="nav-link-text">Work</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <main data-barba="container" data-barba-namespace="home">
+        <section id="home" data-nav="home" class="home-background">
+          <div class="split-flex">
+            <div class="short-info split-flex-col">
+              <div class="hello-heading" style="justify-content: flex-start">
+                <h1>Hello !</h1>
+                <h1>
+                  I am
+                  <span class="gradient">Ayush Khaire !</span>
+                </h1>
+              </div>
+              <div
+                class="about-hello col-flex"
+                style="align-items: flex-start; width: 100%"
+              >
+                <h5>I am <span class="gradient">good</span> at</h5>
+                <div class="the-typer">
+                  <span class="typed-text gradient"></span>
+                </div>
+              </div>
+              <a href="https://github.com/AYUSHKHAIRE" target="_blank" class="glow-on-hover"  >
+                <i class="bx bxl-github "></i>
+                View My GitHub
+                <span class="material-icons">open_in_new</span>
+              </a>
+              <a href="https://linkedin.com/in/ayushkhaire" target="_blank" class="glow-on-hover"  >
+                <i class="bx bxl-linkedin "></i>
+                View My Linkedin
+                <span class="material-icons">open_in_new</span>
+              </a>
+            </div>
+            <div class="profile-photo">
+              <img
+                class="profile-image"
+                src="https://avatars.githubusercontent.com/u/141166916?v=4"
+                alt="Ayush Khaire"
+              />
+            </div>
+          </div>
+        </section>
+        <section id="projects" data-nav="projects">
+          <div class="text">Projects Section</div>
+        </section>
+        <section id="about" data-nav="about">
+          <div class="text">About Section</div>
+        </section>
+        <section id="work" data-nav="work">
+          <div class="text">Work Section</div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      barba.init({
+        transitions: [
+          {
+            name: "fade-transition",
+            leave(data) {
+              return gsap.to(data.current.container, {
+                opacity: 0,
+                duration: 0.5,
+              });
+            },
+            enter(data) {
+              return gsap.from(data.next.container, {
+                opacity: 0,
+                duration: 0.5,
+              });
+            },
+          },
+        ],
+      });
+
+      const sections = document.querySelectorAll("main section");
+      const navLinks = document.querySelectorAll(".nav-link-holder");
+
+      function onScroll() {
+        let currentSectionId = "";
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2
+          ) {
+            currentSectionId = section.id;
+          }
+        });
+
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === "#" + currentSectionId) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", onScroll);
+      window.addEventListener("load", onScroll);
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("href").substring(1);
+          document
+            .getElementById(targetId)
+            .scrollIntoView({ behavior: "smooth" });
+        });
+      });
+      const typed = new Typed(".typed-text", {
+        strings: [
+          "Python",
+          "SQL",
+          "Django",
+          "Web scrapping",
+          "backend development",
+          "Data engineering",
+          "Real Time Data Processing",
+          "Real time streaming",
+        ],
+        typeSpeed: 70,
+        backSpeed: 40,
+        backDelay: 1000,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
