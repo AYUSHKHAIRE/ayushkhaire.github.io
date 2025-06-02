@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "A sleek personal portfolio website to showcase my work, skills, and contact information. It is fully responsive and designed with accessibility and performance in mind. It features animated transitions using Barba.js and GSAP, smooth scrolling, and a dynamic project section.",
+      "timestamp": "2024",
+      "images_urls": ["portfolio-website.png"],
+      "technologies": ["HTML", "CSS", "JavaScript", "GSAP", "Barba.js", "AOS"],
+      "links": [
+        {
+          "text": "View on GitHub",
+          "url": "https://github.com/AYUSHKHAIRE/portfolio"
+        }
+      ]
+    },
+    {
+      "title": "AccessWeb – Accessibility Platform",
+      "description": "A real-time web browsing assistant designed to help low-vision users explore the internet. It uses Python and Django for backend, Selenium to load and interact with live pages, and WebSockets to send screenshots and updates to users. It includes features like voice control, keyboard navigation, zoom, and dynamic content rendering via AJAX.",
+      "timestamp": "2024",
+      "images_urls": ["accessweb.png"],
+      "technologies": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "Selenium",
+        "WebSockets",
+        "OpenCV",
+        "Vertex AI",
+        "HTML",
+        "CSS",
+        "Bootstrap"
+      ],
+      "links": [
+        {
+          "text": "View on GitHub",
+          "url": "https://github.com/AYUSHKHAIRE/web-view"
+        }
+      ]
+    },
+    {
+      "title": "Stock Market ETL & Prediction System",
+      "description": "An end-to-end stock market data platform that automates extraction from live APIs, transforms data into structured formats, loads it into both MongoDB and MySQL, and performs analytics. It uses Apache Kafka and Spark for stream processing and includes predictive models using ML algorithms for stock trend analysis.",
+      "timestamp": "2023",
+      "images_urls": ["stock-etl.png"],
+      "technologies": [
+        "Python",
+        "Apache Kafka",
+        "Apache Spark",
+        "MongoDB",
+        "MySQL",
+        "Django",
+        "Pandas",
+        "Matplotlib",
+        "Machine Learning",
+        "REST APIs"
+      ],
+      "links": [
+        {
+          "text": "View on GitHub",
+          "url": "https://github.com/AYUSHKHAIRE/stocks-stream"
+        }
+      ]
+    }
+  ],
+  "social": [
+    {
+      "text": "GitHub",
+      "url": "https://github.com/AYUSHKHAIRE"
+    },
+    {
+      "text": "Kaggle",
+      "url": "https://www.kaggle.com/ayushkhaire"
+    },
+    {
+      "text": "Hugging Face",
+      "url": "https://huggingface.co/AYUSHKHAIRE"
+    }
+  ],
+  "work": [
+    {
+      "heading": "Kaggle Contributor",
+      "description": "Contributed to Kaggle through active participation in competitions, sharing notebooks with feature engineering, data visualization, and modeling using libraries like scikit-learn and XGBoost. Also contributed datasets to the public repository.",
+      "timestamp": "2023–2024",
+      "images_urls": ["kaggle-competition.png"]
+    },
+    {
+      "heading": "Hugging Face Publisher",
+      "description": "Published cleaned and preprocessed datasets on Hugging Face to support the ML community. Focused on accessibility data and public benchmarks for NLP and computer vision.",
+      "timestamp": "2023–2024",
+      "images_urls": ["huggingface-datasets.png"]
+    }
+  ],
+  "education": [
+    {
+      "heading": "Bachelor of Technology in Computer Science and Engineering",
+      "description": "Pursuing a B.Tech degree with specialization in Data Science and Analytics. Coursework includes Data Structures, Algorithms, Machine Learning, Database Systems, and Big Data.",
+      "timestamp": "2022–2026",
+      "logo": "university.png",
+      "grade": "CGPA: 7.13 (up to 5th semester)"
+    }
+  ]
+}
