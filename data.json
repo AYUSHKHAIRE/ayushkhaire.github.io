@@ -1,47 +1,67 @@
 {
   "projects": [
     {
-      "title": "Portfolio Website",
-      "description": "A sleek personal portfolio website to showcase my work, skills, and contact information. It is fully responsive and designed with accessibility and performance in mind. It features animated transitions using Barba.js and GSAP, smooth scrolling, and a dynamic project section.",
-      "timestamp": "2024",
-      "images_urls": ["portfolio-website.png"],
-      "technologies": ["HTML", "CSS", "JavaScript", "GSAP", "Barba.js", "AOS"],
-      "links": [
-        {
-          "text": "View on GitHub",
-          "url": "https://github.com/AYUSHKHAIRE/portfolio"
-        }
-      ]
-    },
-    {
-      "title": "AccessWeb – Accessibility Platform",
-      "description": "A real-time web browsing assistant designed to help low-vision users explore the internet. It uses Python and Django for backend, Selenium to load and interact with live pages, and WebSockets to send screenshots and updates to users. It includes features like voice control, keyboard navigation, zoom, and dynamic content rendering via AJAX.",
-      "timestamp": "2024",
-      "images_urls": ["accessweb.png"],
+      "title": "AccessWeb – Accessibility Platform for low vision users ",
+      "description": "A real-time web browsing assistant designed to help low-vision users explore the internet. It uses Python and Django for backend, Selenium and docker to load and interact with live pages, and WebSockets to send screenshots and updates to users. It includes features like voice control, keyboard navigation, zoom, and dynamic content rendering via AJAX. it loads and stream the browser in real time , and it is asynchromous and scalable . I also host it using nginx , on a google cloud VM instance .",
+      "timestamp": "jan 2025 - jun 2025",
+      "images_urls": [
+        "https://github.com/AYUSHKHAIRE/web-view/blob/main/assets/code/Screenshot%20from%202025-03-16%2021-28-15.png?raw=true",
+        "https://github.com/AYUSHKHAIRE/web-view/blob/main/assets/general/1_session_screen-captureonline-video-cutter.com-ezgif.com-effects.gif?raw=true",
+        "https://github.com/AYUSHKHAIRE/web-view/blob/main/assets/general/2_view_lens_screen-captureonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif?raw=true",
+        "https://github.com/AYUSHKHAIRE/web-view/blob/main/assets/general/3_ai_intigration_screen-captureonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif?raw=true",
+        "https://github.com/AYUSHKHAIRE/web-view/blob/main/assets/general/4_identify_text_screen-captureonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif?raw=true",
+        "https://github.com/AYUSHKHAIRE/web-view/blob/main/assets/general/5_brail_supporter_screen-captureonline-video-cutter.com.mp4screen-captureonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif?raw=true",
+        "https://github.com/AYUSHKHAIRE/web-view/blob/main/assets/general/6_general_look_screen-captureonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif?raw=true"
+      ],
       "technologies": [
         "Python",
         "Django",
-        "JavaScript",
+        "HTML",
+        "CSS",
+        "JS",
+        "git",
+        "docker",
+        "google cloud",
+        "django channels",
+        "real time streaming",
+        "websockets",
+        "mediapipe",
         "Selenium",
         "WebSockets",
         "OpenCV",
         "Vertex AI",
-        "HTML",
-        "CSS",
-        "Bootstrap"
+        "Google gemini",
+        "google vision",
+        "Machine Learning",
+        "linux",
+        "nginx"
       ],
       "links": [
         {
           "text": "View on GitHub",
           "url": "https://github.com/AYUSHKHAIRE/web-view"
+        },
+        {
+          "text": "Watch on Youtube",
+          "url": "https://www.youtube.com/watch?v=dwbIqAioSvM"
+        },
+        {
+          "text":"View presentation on Canva",
+          "url":"https://www.canva.com/design/DAGh6HDkpGU/ZWyZ4-IbB-RDrhOOydJmiA/view?utm_content=DAGh6HDkpGU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfad01218d2"
+        },
+        {
+          "text":"Read the article on medium",
+          "url":"https://medium.com/@ayushkhaire/making-web-available-for-everyone-presenting-a-fresh-approach-on-web-accessibility-6d327e981eaf"
         }
       ]
     },
     {
       "title": "Stock Market ETL & Prediction System",
       "description": "An end-to-end stock market data platform that automates extraction from live APIs, transforms data into structured formats, loads it into both MongoDB and MySQL, and performs analytics. It uses Apache Kafka and Spark for stream processing and includes predictive models using ML algorithms for stock trend analysis.",
-      "timestamp": "2023",
-      "images_urls": ["stock-etl.png"],
+      "timestamp": "nov 2024 - mar 2025",
+      "images_urls": [
+        "https://github.com/AYUSHKHAIRE/stocks-stream/raw/main/Screenshot%20from%202025-04-13%2020-12-52.png"
+      ],
       "technologies": [
         "Python",
         "Apache Kafka",
@@ -50,14 +70,41 @@
         "MySQL",
         "Django",
         "Pandas",
-        "Matplotlib",
         "Machine Learning",
-        "REST APIs"
+        "ETL",
+        "web scrapping",
+        "kaggle",
+        "Batch processing",
+        "stream processing"
       ],
       "links": [
         {
           "text": "View on GitHub",
           "url": "https://github.com/AYUSHKHAIRE/stocks-stream"
+        },
+        {
+          "text": "dataset - daily stocks - kaggle",
+          "url": "https://www.kaggle.com/datasets/ayushkhaire/stock-past-one-year-data"
+        },
+        {
+          "text": "dataset - Real time - kaggle",
+          "url": "https://www.kaggle.com/datasets/ayushkhaire/stock-past-one-year-data"
+        },
+        {
+          "text": "notebook - daily stocks - kaggle",
+          "url": "https://www.kaggle.com/code/ayushkhaire/past-stock-data"
+        },
+        {
+          "text": "notebook - Real time - kaggle",
+          "url": "https://www.kaggle.com/code/ayushkhaire/real-time-data-update"
+        },
+        {
+          "text": "dataset - Real time - hugging face",
+          "url": "https://huggingface.co/datasets/AYUSHKHAIRE/real-time-stocks-data"
+        },
+        {
+          "text":"training notebook",
+          "url":"https://www.kaggle.com/code/ayushkhaire/mini-project-model-trainning"
         }
       ]
     }
