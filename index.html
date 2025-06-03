@@ -33,10 +33,7 @@
   </head>
   <body>
     <div data-barba="wrapper">
-      <div class="navbar" 
-      data-aos="fade-down"
-      data-aos-duration="3000"
-      >
+      <div class="navbar" data-aos="fade-down" data-aos-duration="3000">
         <div class="nav-links">
           <div id="item-list-1">
             <a class="nav-link-holder" href="#home">
@@ -118,51 +115,56 @@
             </div>
           </div>
         </section>
-        <section id="projects" class="split-flex-col projects-container  "  data-nav="projects">
+        <section
+          id="projects"
+          class="split-flex-col projects-container"
+          data-nav="projects"
+        >
           <div class="head-wrapper">
             <h1 class="section-heading">Projects</h1>
           </div>
-          <div class="projectmain glow-on-hover ">
-            <div class="meta-abt-prj">
-              <div class="project-head-and-desc">
-                <div class="project-head">Project heading</div>
-                <div class="project-description">Project Description</div>
+          <div id="project-conntainer">
+            <div class="projectmain glow-on-hover">
+              <div class="meta-abt-prj">
+                <div class="project-head-and-desc">
+                  <div class="project-head">Project heading</div>
+                  <div class="project-description">Project Description</div>
+                </div>
+                <div class="projecttimestamp">timestamp</div>
               </div>
-              <div class="projecttimestamp">timestamp</div>
-            </div>
-            <div class="project-links">
-              <div class="project-github-link">
-                <a
-                href="https://github.com/AYUSHKHAIRE"
-                target="_blank"
-                class="glow-on-hover"
-                data-aos="fade-up"
-                data-aos-duration="3000"
-              >
-                <i class="bx bxl-github"></i>
-                View on GitHub
-                <span class="material-icons">open_in_new</span>
-              </a>
-              <a
-              href="https://github.com/AYUSHKHAIRE"
-              target="_blank"
-              class="glow-on-hover"
-              data-aos="fade-up"
-              data-aos-duration="3000"
-            >
-              <i class="bx bxl-youtube"></i>
-              View on Youtube
-              <span class="material-icons">open_in_new</span>
-            </a>
+              <div class="project-links">
+                <div class="project-github-link">
+                  <a
+                    href="https://github.com/AYUSHKHAIRE"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    <i class="bx bxl-github"></i>
+                    View on GitHub
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                  <a
+                    href="https://github.com/AYUSHKHAIRE"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    <i class="bx bxl-youtube"></i>
+                    View on Youtube
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+                <div class="project-images"></div>
               </div>
-              <div class="project-images">
+              <div class="project-tech-used">
+                <div class="project-tech-used-item">Python</div>
+                <div class="project-tech-used-item">Django</div>
+                <div class="project-tech-used-item">SQL</div>
+                <div class="project-tech-used-item">Docker</div>
               </div>
-            </div>
-            <div class="project-tech-used">
-              <div class="project-tech-used-item">Python</div>
-              <div class="project-tech-used-item">Django</div>
-              <div class="project-tech-used-item">SQL</div>
-              <div class="project-tech-used-item">Docker</div>
             </div>
           </div>
         </section>
@@ -251,6 +253,79 @@
       });
 
       ScrollReveal().reveal("section");
+
+      function assignProjects() {
+        fetch("data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const projectContainer = document.querySelector(
+              "#project-conntainer"
+            );
+            projectContainer.innerHTML = ""; // Clear any static HTML
+
+            data.projects.forEach((project) => {
+              const projectElement = document.createElement("div");
+              projectElement.classList.add("projectmain", "glow-on-hover");
+
+              // Links: Create from array
+              const linksHTML = project.links
+                .map((link) => {
+                  const icon = link.text.toLowerCase().includes("github")
+                    ? '<i class="bx bxl-github"></i>'
+                    : link.text.toLowerCase().includes("youtube")
+                    ? '<i class="bx bxl-youtube"></i>'
+                    : link.text.toLowerCase().includes("kaggle")
+                    ? '<i class="bx bxl-kaggle"></i>'
+                    : link.text.toLowerCase().includes("medium")
+                    ? '<i class="bx bxl-medium"></i>'
+                    : link.text.toLowerCase().includes("canva")
+                    ? '<i class="bx bxl-canva"></i>'
+                    : '<i class="bx bx-link"></i>';
+
+                  return `
+            <a href="${link.url}" target="_blank" class="glow-on-hover">
+              ${icon} ${link.text}
+              <span class="material-icons">open_in_new</span>
+            </a>
+          `;
+                })
+                .join("");
+
+              // Images
+              const imagesHTML = project.images_urls
+                .map((img) => `<img src="${img}" alt="${project.title}">`)
+                .join("");
+
+              // Technologies
+              const techHTML = project.technologies
+                .map(
+                  (tech) => `<div class="project-tech-used-item">${tech}</div>`
+                )
+                .join("");
+
+              // Final Project HTML
+              projectElement.innerHTML = `
+          <div class="meta-abt-prj">
+            <div class="project-head-and-desc">
+              <div class="project-title">${project.title}</div>
+              <div class="project-description">${project.description}</div>
+            </div>
+            <div class="projecttimestamp">${project.timestamp}</div>
+          </div>
+
+          <div class="project-links">${linksHTML}</div>
+
+          <div class="project-images">${imagesHTML}</div>
+
+          <div class="project-tech-used">${techHTML}</div>
+        `;
+
+              projectContainer.appendChild(projectElement);
+            });
+          })
+          .catch((error) => console.error("Error loading projects:", error));
+      }
+      document.addEventListener("DOMContentLoaded", assignProjects);
     </script>
   </body>
 </html>
