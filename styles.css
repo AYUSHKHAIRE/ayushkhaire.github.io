@@ -190,7 +190,7 @@ body{
   height: 400px; /* or 100vh for full screen */
 }
 
-.section-heading{
+.section-heading , .project-title{
   background: linear-gradient(68deg,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -241,7 +241,7 @@ body{
   padding: 20px;
 }
 
-.project-tech-used-item{
+.project-tech-used-item , .projecttimestamp{
   height: 30px;
   padding: 5px 10px;
   color: #000000;
@@ -253,6 +253,20 @@ body{
   justify-content: center;
   align-items: center;
   border-radius: 16px;
+}
+
+.project-images img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 6px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
 }
 
 /* media queries */
