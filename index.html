@@ -21,6 +21,22 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://kit.fontawesome.com/yourkitid.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.0.1/zoom.min.js"
+      integrity="sha512-OhJxb3F/IiF96I1C2hoqRw8iu54GLjgaw/Bl0SRBuuK2qtPqgpKh5m15dSJxub1GwUgxVGzsBotW742Iva4Y6w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.0.1/zoom.js"
+      integrity="sha512-6E6ANOHjAoSVKVdprNwFYCmjBSBak4ieFbj4AYdRdzA8lLvIdEwwJbV93FO1SFKcvghYBtGP6DrcBUEjOlW0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -29,7 +45,18 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css"
+      integrity="sha512-sV4v0GMh1T+uJvbE4zMT1Zu5xv0vKx0iA1bL2N+lEtY8zBz9UWyXbAXCE4U6C4u8Ftv+qMzMZUIqF+nH1G1MbQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/easyzoom/2.5.0/easyzoom.min.css"
+    />
   </head>
   <body>
     <div data-barba="wrapper">
@@ -44,9 +71,9 @@
               <i class="bx bx-grid-alt"></i>
               <span class="nav-link-text">Projects</span>
             </a>
-            <a class="nav-link-holder" href="#about">
+            <a class="nav-link-holder" href="#social">
               <i class="bx bx-user"></i>
-              <span class="nav-link-text">About</span>
+              <span class="nav-link-text">Social</span>
             </a>
             <a class="nav-link-holder" href="#work">
               <i class="bx bx-chat"></i>
@@ -168,8 +195,186 @@
             </div>
           </div>
         </section>
-        <section id="about" data-nav="about">
-          <div class="text">About Section</div>
+        <section
+          id="social"
+          class="split-flex-col projects-container"
+          data-nav="social"
+        >
+          <div class="head-wrapper">
+            <h1 class="section-heading">Social</h1>
+          </div>
+          <div>
+            <div class="socialmain" id="social-container" >
+              <div class="social-card github">
+                <div class="logo">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png"
+                    alt=""
+                  />
+                </div>
+                <div class="social-text">AYUSHKHAIRE</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://github.com/AYUSHKHAIRE"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    View My GitHub
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+              <div class="social-card kaggle">
+                <div class="logo">
+                  <img
+                    src="https://www.kaggle.com/static/images/favicon.ico"
+                    alt=""
+                  />
+                </div>
+                <div class="social-text">ayushkhaire</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://kaggle.com/ayushkhaire"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    View My Kaggle
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+              <div class="social-card linkedin">
+                <div class="logo">
+                  <img
+                    src="https://cdn.iconscout.com/icon/free/png-256/free-linkedin-circle-logo-icon-download-in-svg-png-gif-file-formats--social-media-pack-logos-icons-1583140.png?f=webp"
+                    alt=""
+                  />
+                </div>
+                <div class="social-text">ayushkhaire</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://linkedin.com/in/ayushkhaire"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    Connect me on Linkedin
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+              <div class="social-card gmail">
+                <div class="logo">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/016/716/465/non_2x/gmail-icon-free-png.png"
+                    alt="gmail"
+                  />
+                </div>
+                <div class="social-text">ayushkhaire.dev@gmail.com</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://gmail.com/"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    Message me on Gmail
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+              <div class="social-card hugging-face">
+                <div class="logo">
+                  <img
+                    src="https://res.cloudinary.com/dyjxveu11/image/upload/v1625971707/Hugging_Face_400_200_00523b4a7e.png"
+                    alt="HF"
+                  />
+                </div>
+                <div class="social-text">AYUSHKHAIRE</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://huggingface.co/AYUSHKHAIRE"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    View My Hugging Face
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+              <div class="social-card X">
+                <div class="logo">
+                  <img
+                    src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_hybrid&w=740"
+                    alt="X"
+                  />
+                </div>
+                <div class="social-text">ayushkhaire_x</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://huggingface.co/AYUSHKHAIRE"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    View My X
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+              <div class="social-card medium">
+                <div class="logo">
+                  <img
+                    src="https://findingtom.com/images/uploads/medium-logo/article-image-00.jpeg"
+                    alt="medium"
+                  />
+                </div>
+                <div class="social-text">ayushkhaire</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://medium.com/@ayushkhaire"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    View My Medium
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+              <div class="social-card youtube">
+                <div class="logo">
+                  <img
+                    src="https://images.indianexpress.com/2023/05/youtube-logo-featured.jpg"
+                    alt="youtube"
+                  />
+                </div>
+                <div class="social-text">ayushkhaire_dev</div>
+                <div class="social-visit-container">
+                  <a
+                    href="https://www.youtube.com/@ayushkhaire_dev"
+                    target="_blank"
+                    class="glow-on-hover"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
+                    View My youtube Channel
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section id="work" data-nav="work">
           <div class="text">Work Section</div>
@@ -275,13 +480,18 @@
                     : link.text.toLowerCase().includes("youtube")
                     ? '<i class="bx bxl-youtube"></i>'
                     : link.text.toLowerCase().includes("kaggle")
-                    ? '<i class="bx bxl-kaggle"></i>'
+                    ? `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16">
+                      <path d="M304.2 501.5L158.4 320.3 298.2 185c2.6-2.7 1.7-10.5-5.3-10.5h-69.2c-3.5 0-7 1.8-10.5 5.3L80.9 313.5V7.5q0-7.5-7.5-7.5H21.5Q14 0 14 7.5v497q0 7.5 7.5 7.5h51.9q7.5 0 7.5-7.5v-109l30.8-29.3 110.5 140.6c3 3.5 6.5 5.3 10.5 5.3h66.9q5.3 0 6-3z" fill="white"/>
+                    </svg>
+                    `
                     : link.text.toLowerCase().includes("medium")
                     ? '<i class="bx bxl-medium"></i>'
                     : link.text.toLowerCase().includes("canva")
                     ? '<i class="bx bxl-canva"></i>'
+                    : link.text.toLowerCase().includes("hugging")
+                    ? `<i>🤗<i/>`
                     : '<i class="bx bx-link"></i>';
-
                   return `
             <a href="${link.url}" target="_blank" class="glow-on-hover">
               ${icon} ${link.text}
@@ -293,7 +503,10 @@
 
               // Images
               const imagesHTML = project.images_urls
-                .map((img) => `<img src="${img}" alt="${project.title}">`)
+                .map(
+                  (img) =>
+                    `<img src="${img}" alt="${project.title}" data-action="zoom">`
+                )
                 .join("");
 
               // Technologies
@@ -307,7 +520,7 @@
               projectElement.innerHTML = `
           <div class="meta-abt-prj">
             <div class="project-head-and-desc">
-              <div class="project-title">${project.title}</div>
+              <h2 class="project-title">${project.title}</h2>
               <div class="project-description">${project.description}</div>
             </div>
             <div class="projecttimestamp">${project.timestamp}</div>
@@ -325,6 +538,7 @@
           })
           .catch((error) => console.error("Error loading projects:", error));
       }
+      
       document.addEventListener("DOMContentLoaded", assignProjects);
     </script>
   </body>
