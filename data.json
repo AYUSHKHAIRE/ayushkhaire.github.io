@@ -100,50 +100,13 @@
         },
         {
           "text": "dataset - Real time - hugging face",
-          "url": "https://huggingface.co/datasets/AYUSHKHAIRE/real-time-stocks-data"
+          "url": "https://www.huggingface.co/datasets/AYUSHKHAIRE/real-time-stocks-data"
         },
         {
           "text":"training notebook",
           "url":"https://www.kaggle.com/code/ayushkhaire/mini-project-model-trainning"
         }
       ]
-    }
-  ],
-  "social": [
-    {
-      "text": "GitHub",
-      "url": "https://github.com/AYUSHKHAIRE"
-    },
-    {
-      "text": "Kaggle",
-      "url": "https://www.kaggle.com/ayushkhaire"
-    },
-    {
-      "text": "Hugging Face",
-      "url": "https://huggingface.co/AYUSHKHAIRE"
-    }
-  ],
-  "work": [
-    {
-      "heading": "Kaggle Contributor",
-      "description": "Contributed to Kaggle through active participation in competitions, sharing notebooks with feature engineering, data visualization, and modeling using libraries like scikit-learn and XGBoost. Also contributed datasets to the public repository.",
-      "timestamp": "2023–2024",
-      "images_urls": ["kaggle-competition.png"]
-    },
-    {
-      "heading": "Hugging Face Publisher",
-      "description": "Published cleaned and preprocessed datasets on Hugging Face to support the ML community. Focused on accessibility data and public benchmarks for NLP and computer vision.",
-      "timestamp": "2023–2024",
-      "images_urls": ["huggingface-datasets.png"]
-    }
-  ],
-  "education": [
-    {
-      "heading": "Bachelor of Technology in Computer Science and Engineering",
-      "description": "Pursuing a B.Tech degree with specialization in Data Science and Analytics. Coursework includes Data Structures, Algorithms, Machine Learning, Database Systems, and Big Data.",
-      "timestamp": "2022–2026",
-      "logo": "university.png",
-      "grade": "CGPA: 7.13 (up to 5th semester)"
     }
   ]
 }
