@@ -198,7 +198,7 @@ body{
 }
 
 /* Projects */
-#projects {
+#projects , #social{
   align-items: center;
   justify-content: center;
 }
@@ -216,8 +216,12 @@ body{
   align-items: flex-start;
   justify-content: center;
   padding: 20px;
-  max-width: 40vw;
   width: 100%;
+  margin: 40px;
+}
+
+.projectmain:hover{
+  z-index: 2;
 }
 
 .meta-abt-prj{
@@ -230,6 +234,7 @@ body{
 
 .project-head-and-desc{
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .project-tech-used{
@@ -255,6 +260,15 @@ body{
   border-radius: 16px;
 }
 
+.project-tech-used-item:hover , .projecttimestamp:hover{
+  scale: 1.5;
+  transition: ease-in-out 0.3s;
+}
+
+.projecttimestamp{
+  width: 300px;
+}
+
 .project-images img {
   height: 100px;
   width: auto;
@@ -266,7 +280,49 @@ body{
 }
 
 .project-images img:hover {
-  transform: scale(1.05);
+  transform: scale(5);
+}
+
+/* social */
+.social-conntainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.social-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+.social-card .logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+.social-card .logo:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 0.3s;
+}
+
+.social-card .logo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.social-card .social-text {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin: 20px;
 }
 
 /* media queries */
@@ -285,6 +341,14 @@ body{
     .profile-image {
       height: 20vh;
       margin-top: -100px;
+    }
+    .meta-abt-prj{
+      flex-direction: column-reverse;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .projectmain{
+      max-width: 40vw;
     }
   }
 
