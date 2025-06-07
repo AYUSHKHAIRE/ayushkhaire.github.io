@@ -71,13 +71,13 @@
               <i class="bx bx-grid-alt"></i>
               <span class="nav-link-text">Projects</span>
             </a>
-            <a class="nav-link-holder" href="#social">
-              <i class="bx bx-user"></i>
-              <span class="nav-link-text">Social</span>
-            </a>
             <a class="nav-link-holder" href="#work">
               <i class="bx bx-chat"></i>
               <span class="nav-link-text">Work</span>
+            </a>
+            <a class="nav-link-holder" href="#social">
+              <i class="bx bx-user"></i>
+              <span class="nav-link-text">Social</span>
             </a>
           </div>
         </div>
@@ -195,6 +195,81 @@
             </div>
           </div>
         </section>
+        <section id="work" data-nav="work">
+          <div class="split-flex-col">
+            <div class="head-wrapper">
+              <h1 class="section-heading">My work</h1>
+            </div>
+            <div>
+              <div class="workmain" id="wotk-container">
+                <div class="work-card-main kaggle-datasets ">
+                  <div class="work-image">
+                    <img
+                      src="/portfoio/assets/work/Screenshot from 2025-06-07 11-52-47.png"
+                      alt="work"
+                    />
+                    <div class="the-work-main"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    >
+                      <div class="work-detail">
+                        <div class="work-head">My kaggle Datasets</div>
+                        <div class="work-desc">
+                          I am maintaining the open source datasets on kaggle .
+                        </div>
+                        <div class="work-desc">
+                          3.5K downloads | 23K views | 250+ upvotes
+                        </div>
+                      </div>
+                      <a
+                        href="https://kaggle.com/ayushkhaire/datasets/"
+                        target="_blank"
+                        class="glow-on-hover"
+                      >
+                        <i class="bx bxl-github"></i>
+                        View My Datasets
+                        <span class="material-icons">open_in_new</span>
+                      </a>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="work-card-main kaggle-notebooks">
+                  <div class="work-image">
+                    <img
+                      src="/portfoio/assets/work/Screenshot from 2025-06-07 11-53-00.png"
+                      alt="work"
+                    />
+                    <div class="the-work-main"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    >
+                      <div class="work-detail">
+                        <div class="work-head">My kaggle Notebooks</div>
+                        <div class="work-desc">
+                          I am maintaining the open source notebooks on kaggle .
+                        </div>
+                        <div class="work-desc">
+                          15K+ views | 650+ upvotes | 180+ Comments | 450+ forks
+                        </div>
+                      </div>
+                      <a
+                        href="https://kaggle.com/ayushkhaire/code/"
+                        target="_blank"
+                        class="glow-on-hover"
+                      >
+                        <i class="bx bxl-github"></i>
+                        View My Notebooks
+                        <span class="material-icons">open_in_new</span>
+                      </a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section
           id="social"
           class="split-flex-col projects-container"
@@ -204,7 +279,7 @@
             <h1 class="section-heading">Social</h1>
           </div>
           <div>
-            <div class="socialmain" id="social-container" >
+            <div class="socialmain" id="social-container">
               <div class="social-card github">
                 <div class="logo">
                   <img
@@ -376,9 +451,6 @@
             </div>
           </div>
         </section>
-        <section id="work" data-nav="work">
-          <div class="text">Work Section</div>
-        </section>
       </main>
     </div>
 
@@ -538,7 +610,7 @@
           })
           .catch((error) => console.error("Error loading projects:", error));
       }
-      
+
       document.addEventListener("DOMContentLoaded", assignProjects);
     </script>
   </body>
