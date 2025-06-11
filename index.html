@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ayush Khaire | Portfolio</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/141166916?v=4" />
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -142,6 +143,7 @@
             </div>
           </div>
         </section>
+        <!-- projects -->
         <section
           id="projects"
           class="split-flex-col projects-container"
@@ -150,7 +152,7 @@
           <div class="head-wrapper">
             <h1 class="section-heading">Projects</h1>
           </div>
-          <div id="project-conntainer">
+          <div id="project-container">
             <div class="projectmain glow-on-hover">
               <div class="meta-abt-prj">
                 <div class="project-head-and-desc">
@@ -195,81 +197,96 @@
             </div>
           </div>
         </section>
+        <!-- work -->
         <section id="work" data-nav="work">
           <div class="split-flex-col">
             <div class="head-wrapper">
-              <h1 class="section-heading">My work</h1>
+              <h1 class="section-heading">My Work</h1>
             </div>
             <div>
-              <div class="workmain" id="wotk-container">
-                <div class="work-card-main kaggle-datasets ">
+              <div class="workmain split-flex-col " id="wotk-container">
+                <!-- Kaggle Datasets -->
+                <div class="work-card-main kaggle-datasets glow-on-hover ">
                   <div class="work-image">
-                    <img
-                      src="/portfoio/assets/work/Screenshot from 2025-06-07 11-52-47.png"
-                      alt="work"
-                    />
-                    <div class="the-work-main"
-                    data-aos="fade-up"
-                    data-aos-duration="3000"
-                    >
+                    <img src="/portfoio/assets/work/Screenshot from 2025-06-07 11-52-47.png" alt="Kaggle Datasets" />
+                    <div class="the-work-main" data-aos="fade-up" data-aos-duration="3000">
                       <div class="work-detail">
-                        <div class="work-head">My kaggle Datasets</div>
+                        <div class="work-head">Kaggle Datasets</div>
+                        <div class="work-desc">I actively publish and maintain open source datasets on Kaggle.</div>
                         <div class="work-desc">
-                          I am maintaining the open source datasets on kaggle .
-                        </div>
-                        <div class="work-desc">
-                          3.5K downloads | 23K views | 250+ upvotes
+                          3.8K+ Downloads | 23K+ Views | 294 Votes | 23 Kernels
                         </div>
                       </div>
-                      <a
-                        href="https://kaggle.com/ayushkhaire/datasets/"
-                        target="_blank"
-                        class="glow-on-hover"
-                      >
-                        <i class="bx bxl-github"></i>
-                        View My Datasets
+                      <a href="https://kaggle.com/ayushkhaire/datasets/" target="_blank" class="glow-on-hover">
+                        <i class="fa-brands fa-kaggle"></i> View My Datasets
                         <span class="material-icons">open_in_new</span>
                       </a>
                     </div>
                   </div>
-                  
                 </div>
-                <div class="work-card-main kaggle-notebooks">
+        
+                <!-- Kaggle Notebooks -->
+                <div class="work-card-main kaggle-notebooks glow-on-hover ">
                   <div class="work-image">
-                    <img
-                      src="/portfoio/assets/work/Screenshot from 2025-06-07 11-53-00.png"
-                      alt="work"
-                    />
-                    <div class="the-work-main"
-                    data-aos="fade-up"
-                    data-aos-duration="3000"
-                    >
+                    <img src="/portfoio/assets/work/Screenshot from 2025-06-07 11-53-00.png" alt="Kaggle Notebooks" />
+                    <div class="the-work-main" data-aos="fade-up" data-aos-duration="3000">
                       <div class="work-detail">
-                        <div class="work-head">My kaggle Notebooks</div>
+                        <div class="work-head">Kaggle Notebooks</div>
+                        <div class="work-desc">Maintaining and publishing high-quality open notebooks with strong community engagement.</div>
                         <div class="work-desc">
-                          I am maintaining the open source notebooks on kaggle .
-                        </div>
-                        <div class="work-desc">
-                          15K+ views | 650+ upvotes | 180+ Comments | 450+ forks
+                          15K+ Views | 690 Votes | 181 Comments | 450+ Forks
                         </div>
                       </div>
-                      <a
-                        href="https://kaggle.com/ayushkhaire/code/"
-                        target="_blank"
-                        class="glow-on-hover"
-                      >
-                        <i class="bx bxl-github"></i>
-                        View My Notebooks
+                      <a href="https://kaggle.com/ayushkhaire/code/" target="_blank" class="glow-on-hover">
+                        <i class="fa-brands fa-kaggle"></i> View My Notebooks
                         <span class="material-icons">open_in_new</span>
                       </a>
                     </div>
                   </div>
-                  
                 </div>
+        
+                <!-- Kaggle Competitions -->
+                <div class="work-card-main kaggle-competitions glow-on-hover ">
+                  <div class="work-image">
+                    <img src="/portfoio/assets/work/Screenshot from 2025-06-07 11-53-18.png" alt="Kaggle Competitions" />
+                    <div class="the-work-main" data-aos="fade-up" data-aos-duration="3000">
+                      <div class="work-detail">
+                        <div class="work-head">Kaggle Competitions</div>
+                        <div class="work-desc">Actively participated in 10 Kaggle competitions to sharpen real-world data science skills.</div>
+                      </div>
+                      <a href="https://kaggle.com/ayushkhaire/competitions/" target="_blank" class="glow-on-hover">
+                        <i class="fa-brands fa-kaggle"></i> View Competitions
+                        <span class="material-icons">open_in_new</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+        
+                <!-- Hugging Face Dataset -->
+                <div class="work-card-main huggingface-dataset glow-on-hover">
+                  <div class="work-image">
+                    <img src="/portfoio/assets/work/Screenshot from 2025-06-07 11-54-19.png" alt="Hugging Face" />
+                    <div class="the-work-main" data-aos="fade-up" data-aos-duration="3000">
+                      <div class="work-detail">
+                        <div class="work-head">Hugging Face Dataset</div>
+                        <div class="work-desc">Published a unique dataset on Hugging Face containing 144 DPWM pads.</div>
+                        <div class="work-desc">
+                          4 Likes | Publicly Available for the ML Community
+                        </div>
+                      </div>
+                      <a href="https://huggingface.co/AYUSHKHAIRE" target="_blank" class="glow-on-hover">
+                        <i class="fa-brands fa-hugging-face"></i> View on Hugging Face
+                        <span class="material-icons">open_in_new</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+        
               </div>
             </div>
           </div>
         </section>
+        <!-- social -->
         <section
           id="social"
           class="split-flex-col projects-container"
@@ -395,7 +412,7 @@
                 <div class="social-text">ayushkhaire_x</div>
                 <div class="social-visit-container">
                   <a
-                    href="https://huggingface.co/AYUSHKHAIRE"
+                    href="https://x.com/ayushkhaire_x"
                     target="_blank"
                     class="glow-on-hover"
                     data-aos="fade-up"
@@ -453,6 +470,10 @@
         </section>
       </main>
     </div>
+    <footer class="footer">
+      <p>© 2025 <a href="https://ayushkhaire.site" target="_blank">ayushkhaire.site</a>. All rights reserved.</p>
+    </footer>
+    
 
     <script>
       AOS.init();
@@ -536,7 +557,7 @@
           .then((response) => response.json())
           .then((data) => {
             const projectContainer = document.querySelector(
-              "#project-conntainer"
+              "#project-container"
             );
             projectContainer.innerHTML = ""; // Clear any static HTML
 
