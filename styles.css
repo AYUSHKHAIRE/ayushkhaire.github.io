@@ -341,6 +341,7 @@ section {
   font-weight: 500;
   transition: color 0.3s ease;
   margin: 20px;
+  word-break: break-all; 
 }
 
 /* work */
